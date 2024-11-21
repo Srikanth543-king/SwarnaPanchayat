@@ -1,0 +1,85 @@
+<html> 
+<head>
+<script>
+
+function multiplyBy1()
+{
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+	htax = document.getElementById("HT").value;
+	htax1=htax;
+	a1=htax;
+	a2=htax;
+	n1=num1;
+	n2=num2;
+        document.getElementById("Length").innerHTML = num1 * 3;
+	document.getElementById("Width").innerHTML = num2 * 3;
+	document.getElementById("CVs").innerHTML = (htax*100)/2;
+	htax1=(a1*100)/2;
+        document.getElementById("sq1").innerHTML =Math.round(htax1/(n1*n2));
+	
+}
+function multiplyBy2()
+{
+        num1 = document.getElementById("thirdNumber").value;
+        num2 = document.getElementById("fourthNumber").value;
+	htax = document.getElementById("HT").value;
+	htax1=htax;
+	a1=htax;
+	a2=htax;
+	n1=num1;
+	n2=num2;
+        document.getElementById("CVb").innerHTML = (htax*100)/2;
+	htax1=(a1*100)/2;
+        document.getElementById("sq2").innerHTML =Math.round(htax1/(n1*n2));
+
+}
+function multiplyBy3()
+{
+        htax = document.getElementById("HT").value;
+	hh1=htax;
+	hh2=htax;
+	h4=Math.round(htax);
+	document.getElementById("ht").innerHTML =htax;
+	h1=Math.round((htax*8)/100);
+	h2=Math.round((hh1*3)/100);
+	h3=Math.round((hh1*1)/100);
+	document.getElementById("lc").innerHTML =h1;
+	document.getElementById("st").innerHTML =h2;
+	document.getElementById("ft").innerHTML =h3;
+	document.getElementById("tt").innerHTML =h1+h2+h3+h4;
+	
+}
+ </script>
+
+<meta charset=utf-8 />
+<title>Swarna Panchayat Data Entry </title>
+<style type="text/css">
+body {margin: 30px;}
+</style> 
+</head>
+<body>
+<h2>Swarna Panchayat Data Entry</h2>
+<form>
+Site Length     : <input type="number" id="firstNumber" /><br>
+Site Width   : <input type="number" id="secondNumber" /><br>
+Building Length     : <input type="number" id="thirdNumber" /><br>
+Building Width   : <input type="number" id="fourthNumber" /><br>
+HouseTax   : <input type="number" id="HT" /><br>
+<input type="button" onClick="multiplyBy1()" Value="Site" />
+<input type="button" onClick="multiplyBy2()" Value="Building" />
+<input type="button" onClick="multiplyBy3()" Value="Tax" />
+ <input type="reset" value="Reset">
+</form>
+<h3>Results</h3>
+<table border=1><tr><Th>Length</th><th>Width</th><th>Site Rate per(Sq.yards)(Site)</th><th>Captial Value of Site</th></tr>
+	<tr><td><span id = "Length"></span></td><td><span id = "Width"></span></td><td><span id = "sq1"></span></td><td><span id = "CVs"></span></td></tr></table>
+<br><table border=1><tr><Th>Captial Value of Building</th><th>Site Rate per(Sq.yards)(Building)</th></tr>
+<tr><td><span id = "CVb"></span></td><td><span id = "sq2"></span></td></tr></table>
+
+<br><table border=1><tr><th>HT</th><th>LC</th><th>ST</th><th>FT</th><th>TT</th></tr>
+	<tr><td><span id = "ht"></span></td><td><span id = "lc"></span></td><td><span id = "st"></span></td><td><span id = "ft"></span></td><td><span id = "tt"></span></td></tr></table>
+
+</p>
+</body>
+</html>
